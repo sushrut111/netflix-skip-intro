@@ -4,7 +4,9 @@
     "name": "Netflix Skip Intro",
     "description": "Automatically skip intro when available",
     "version": "1.0",
-
+    "icons": {
+        "128": "icon.png"
+    },
     "content_scripts": [
         {
             "matches": ["https://www.netflix.com/watch/*"],
