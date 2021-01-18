@@ -10,7 +10,5 @@
             "matches": ["https://www.netflix.com/watch/*"],
             "js": ["contentScript.js"]
         }
-    ],
-
-    "permissions": ["tabs"]
+    ]
 }
