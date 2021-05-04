@@ -12,5 +12,11 @@
             "matches": ["https://www.netflix.com/watch/*"],
             "js": ["contentScript.js"]
         }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "*://www.netflix.com/watch/*", "tabs", "webNavigation"
     ]
 }
