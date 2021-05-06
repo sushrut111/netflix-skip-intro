@@ -1,4 +1,5 @@
-let observer = new MutationObserver((mutations) => {
+if(typeof observer==='undefined'){
+  let observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (!mutation.addedNodes) return
   
@@ -7,6 +8,9 @@ let observer = new MutationObserver((mutations) => {
         let node = mutation.addedNodes[i];
         if(node.classList && node.classList.contains("skip-credits")){
             node.children[0].click();
+        }
+        if(node.hasAttribute && node.hasAttribute("data-uia") && node.getAttribute("data-uia")==="next-episode-seamless-button"){
+          node.click();
         }
 
       }
@@ -19,3 +23,4 @@ let observer = new MutationObserver((mutations) => {
     , attributes: false
     , characterData: false
   })
+}
